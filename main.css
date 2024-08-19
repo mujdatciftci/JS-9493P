@@ -6,6 +6,7 @@
 
 body {
   overflow-x: hidden;
+  font-family: "inter", "Sans-serif";
 }
 
 ul,
@@ -40,6 +41,12 @@ button:disabled {
   cursor: no-drop;
 }
 
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .btn {
   display: inline-block;
   padding: 0 25px;
@@ -67,31 +74,146 @@ button:disabled {
   color: #1367ef;
 }
 
+.active {
+  color: #101010 !important;
+}
+
 textarea {
   overflow: auto;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="number"],
-textarea {
+input:focus {
   outline: none;
-  border: 1px solid #dee0ea;
-  padding: 8px 8px 8px 15px;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-textarea:focus {
-  border-color: gray;
+/*? header */
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left:0;
+  height: 100%;
+  max-width: 200px;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgba(177,177,177,1);
+  z-index: 10;
+  background-color: #fff;
 }
 
-input[type="number"]::-webkit-inner-spin-button {
-  opacity: 1;
+.header-logo {
+  font-size: 32px;
+  font-family: "lalezar";
+  padding: 0 10px;
+}
+
+.navbar{
+  margin-top: 25px;
+}
+
+.navbar .menu-item {
+  margin-bottom: 35px;
+}
+.navbar .menu-link {
+  color: #b1b1b1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .menu-link-icon {
+  font-size: 20px;
+}
+
+header .off {
+  position: absolute;
+  top: 0;
+  left: 188px;
+  padding: 3px;
+  border: 1px solid #ededed;
+  color: #b1b1b1;
+  border-left: unset;
+  z-index: 9;
 }
 
 
+/*? Account */
+.header-top {
+  height: 90px;
+  background-color: #fff;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: center;
+  
+}
+.account {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.account-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.account button {
+  background-color: unset;
+  background-size: cover;
+}
+
+.account button img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.account form {
+  position: relative;
+  border-radius: 30px;
+}
+
+.account input {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 30px;
+  padding: 10px 30px;
+  border: none;
+  background-color: #F5F7FA;
+}
+
+.account input::placeholder {
+  color: #718ebf;
+
+}
+
+.account form button{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 0 10px;
+  color: #718ebf;
+
+}
+
+.account .account-icon {
+  background-color: #F5F7FA;
+  border-radius: 50%;
+  padding: 10px 12px;
+}
+
+.account .bi-gear-fill {
+  color: #718ebf;
+}
+
+.account .bi-bell {
+  color: #fe5c73;
+}
 

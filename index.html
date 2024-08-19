@@ -9,9 +9,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!--! header    -->
+    <!--! Header Left   -->
     <header>
       <div class="header-wrapper">
         <div class="header-logo">
@@ -21,16 +25,71 @@
           <ul class="menu-list-items">
             <li class="menu-item">
               <a href="index.html" class="menu-link">
-                <div class="menu-link-icon">i</div>
-                Anasayfa 
+                <div class="menu-link-icon">
+                  <i class="bi bi-house-fill"></i>
+                </div>
+                <div>Anasayfa</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="index.html" class="menu-link">
+                <div class="menu-link-icon">
+                  <i class="bi bi-person-fill"></i>
+                </div>
+                Hesabım
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="index.html" class="menu-link active">
+                <div class="menu-link-icon">
+                  <i class="bi bi-file-earmark-fill"></i>
+                </div>
+                Derslerim
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="index.html" class="menu-link">
+                <div class="menu-link-icon">
+                  <i class="bi bi-gear-fill"></i>
+                </div>
+                Ayarlar
               </a>
             </li>
           </ul>
         </nav>
       </div>
-    </header> 
+      <div class="off">
+        <i class="bi bi-chevron-left"></i>
+      </div>
+    </header>
 
+    <!--! Header Top -->
+    <section class="header-top">
+      <div class="container">
+        <div class="account">
+          <div class="account-left">
+            <form class="form">
+              <input type="text" placeholder="Arama">
+              <button>
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+            <a href="#" class="account-icon">
+              <i class="bi bi-gear-fill"></i>
+            </a>
+            <a href="#" class="account-icon">
+              <i class="bi bi-bell"></i>
+            </a>
+            <button>
+              <img src="img/account.jpg" alt="">
+            </button>
+          </div>
+          
+        </div>
+      </div>
+    </section>
 
+    <!--! Main -->
 
 
 

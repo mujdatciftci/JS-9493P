@@ -48,32 +48,8 @@ button:disabled {
   margin: 0 auto;
 }
 
-.btn {
-  display: inline-block;
-  padding: 0 25px;
-  line-height: 40px;
-  border: 1px solid black;
-  transition: 0.2s ease all;
-}
 
-.btn-sm {
-  line-height: 35px;
-}
 
-.btn-lg {
-  line-height: 45px;
-}
-
-.btn-primary {
-  background-color: #1367ef;
-  color: #fff;
-  border-color: #1367ef;
-}
-
-.btn-primary:hover {
-  background-color: #fff;
-  color: #1367ef;
-}
 
 .active {
   color: #101010 !important;
@@ -258,7 +234,7 @@ header .off {
   padding-right: 30px;
 }
 
-.content .content-right {
+.content .content-left {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(3,80px);
@@ -275,7 +251,7 @@ header .off {
   box-shadow: 0px 0px 10px 0px rgb(207, 207, 207);
 }
 
-.content-left {
+.content-right {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -286,22 +262,37 @@ header .off {
   background-color: #fff;
   border-radius: 20px;
   padding: 20px 10px;
-  max-width: 200px;
-  min-height: 180px;
+  width: 220px;
+  height: 200px;
 }
 
-.content-left button {
+
+
+.content-right button {
   padding: 15px 30px;
   width: 100%;
   border-radius: 20px;
   background-color: #fedb99;
   color: #333b69;
+  font-size: 18px;
 }
 
-.content-left p {
-  font-size: 18px;
+.content-right p {
+  font-size: 20px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
+  color: #333b69;
+}
+
+.content-right .circle-icon {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.circle-icon i {
+  font-size: 20px;
   color: #333b69;
 }
 

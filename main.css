@@ -294,5 +294,6 @@ header .off {
 .circle-icon i {
   font-size: 20px;
   color: #333b69;
+  cursor: pointer;
 }
 

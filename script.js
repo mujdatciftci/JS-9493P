@@ -1,18 +1,17 @@
 const numberButton = document.getElementById("numberButton");
-function up() {
-  let currentValue = parseInt(numberButton.innerText);
-  currentValue++;
-  numberButton.innerText = currentValue;
-  numberButton.style = "background-color:#FFE0EB";
-}
-numberButton.addEventListener("click", up);
-
 const startButton = document.getElementById("startButton");
 const iconPlay = document.querySelector(".bi-play-circle");
 const iconGo = document.querySelector(".bi-pause-circle");
 const iconReset = document.querySelector(".bi-x-circle");
 const iconCircle = document.querySelector(".circle-icon");
 let myTimer = createElementTimer();
+var saniye = 0;
+var dakika = 0;
+var saat = 0;
+
+numberButton.addEventListener("click", up);
+startButton.addEventListener("click", baslat);
+iconPlay.addEventListener("click", baslat);
 
 function baslat() {
   startButton.innerText = "";
@@ -21,15 +20,15 @@ function baslat() {
   if (iconCircle.children.length < 2) {
     createElement();
     startButton.style = "background-color:#DCFAF8";
+    let timer = setInterval(kronometre, 1000);
   }
-  let timer = setInterval(kronometre, 1000);
-  }
-
-startButton.addEventListener("click", baslat);
-iconPlay.addEventListener("click", baslat);
-
-
-
+}
+function up() {
+  let currentValue = parseInt(numberButton.innerText);
+  currentValue++;
+  numberButton.innerText = currentValue;
+  numberButton.style = "background-color:#FFE0EB";
+}
 function createElement() {
   const iPause = document.createElement("i");
   iPause.className = "bi-pause-circle";
@@ -39,7 +38,6 @@ function createElement() {
   document.querySelector(".circle-icon").appendChild(iPause);
   document.querySelector(".circle-icon").appendChild(iReset);
 }
-
 function createElementTimer() {
   let span1 = document.createElement("span");
   span1.innerText = "00";
@@ -67,11 +65,6 @@ function createElementTimer() {
 
   return divTimer;
 }
-
-var saniye = 0;
-var dakika = 0;
-var saat = 0;
-
 function kronometre() {
   saniye++;
 
@@ -100,4 +93,3 @@ function kronometre() {
     myTimer.children[2].innerText = "0" + dakika;
   }
 }
-
